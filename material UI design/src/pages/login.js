@@ -22,12 +22,18 @@ const Login = () => {
           'Must be a valid email')
         .max(255)
         .required(
-          'Email is required'),
+          'Email is required')
+        .test('is-valid-email', 'Account does not exist.', (val) => {
+          return val == 'test@smu.edu.sg'
+        }),
       password: Yup
         .string()
         .max(255)
         .required(
           'Password is required')
+        .test('is-valid-password', 'Invalid password.', (val) => {
+          return val == 'P@$$w0rd'
+        })
     }),
     onSubmit: () => {
       router.push('/');
