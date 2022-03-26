@@ -82,7 +82,7 @@ const orders = [
 
 export const LatestOrders = (props) => (
   <Card {...props}>
-    <CardHeader title="Latest Orders" />
+    <CardHeader title="Recent Loans" />
     <PerfectScrollbar>
       <Box sx={{ minWidth: 800 }}>
         <Table>
