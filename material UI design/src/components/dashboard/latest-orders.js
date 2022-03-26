@@ -26,7 +26,7 @@ const orders = [
       name: 'Ekaterina Tankova'
     },
     createdAt: 1555016400000,
-    status: 'pending'
+    status: 'payment pending'
   },
   {
     id: uuid(),
@@ -36,7 +36,7 @@ const orders = [
       name: 'Cao Yu'
     },
     createdAt: 1555016400000,
-    status: 'delivered'
+    status: 'payment received'
   },
   {
     id: uuid(),
@@ -46,7 +46,7 @@ const orders = [
       name: 'Alexa Richardson'
     },
     createdAt: 1554930000000,
-    status: 'refunded'
+    status: 'payment due'
   },
   {
     id: uuid(),
@@ -56,7 +56,7 @@ const orders = [
       name: 'Anje Keizer'
     },
     createdAt: 1554757200000,
-    status: 'pending'
+    status: 'payment due'
   },
   {
     id: uuid(),
@@ -66,7 +66,7 @@ const orders = [
       name: 'Clarke Gillebert'
     },
     createdAt: 1554670800000,
-    status: 'delivered'
+    status: 'payment received'
   },
   {
     id: uuid(),
@@ -76,7 +76,7 @@ const orders = [
       name: 'Adam Denisov'
     },
     createdAt: 1554670800000,
-    status: 'delivered'
+    status: 'payment received'
   }
 ];
 
@@ -92,7 +92,7 @@ export const LatestOrders = (props) => (
                 Order Ref
               </TableCell>
               <TableCell>
-                Customer
+                Recent loans
               </TableCell>
               <TableCell sortDirection="desc">
                 <Tooltip
@@ -103,10 +103,11 @@ export const LatestOrders = (props) => (
                     active
                     direction="desc"
                   >
-                    Date
+                    Date Loaned
                   </TableSortLabel>
                 </Tooltip>
               </TableCell>
+              
               <TableCell>
                 Status
               </TableCell>
@@ -129,8 +130,8 @@ export const LatestOrders = (props) => (
                 </TableCell>
                 <TableCell>
                   <SeverityPill
-                    color={(order.status === 'delivered' && 'success')
-                    || (order.status === 'refunded' && 'error')
+                    color={(order.status === 'payment received' && 'success')
+                    || (order.status === 'payment due' && 'error')
                     || 'warning'}
                   >
                     {order.status}
