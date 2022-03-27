@@ -26,6 +26,7 @@ const orders = [
       name: 'Ekaterina Tankova'
     },
     createdAt: 1555016400000,
+    returndate: 1577016400000,
     status: 'payment pending'
   },
   {
@@ -36,6 +37,7 @@ const orders = [
       name: 'Cao Yu'
     },
     createdAt: 1555016400000,
+    returndate: 1599026400000,
     status: 'payment received'
   },
   {
@@ -46,6 +48,7 @@ const orders = [
       name: 'Alexa Richardson'
     },
     createdAt: 1554930000000,
+    returndate: 1554500000000,
     status: 'payment due'
   },
   {
@@ -56,6 +59,7 @@ const orders = [
       name: 'Anje Keizer'
     },
     createdAt: 1554757200000,
+    returndate: 1554500000000,
     status: 'payment due'
   },
   {
@@ -66,6 +70,7 @@ const orders = [
       name: 'Clarke Gillebert'
     },
     createdAt: 1554670800000,
+    returndate: 1555016400000,
     status: 'payment received'
   },
   {
@@ -76,6 +81,7 @@ const orders = [
       name: 'Adam Denisov'
     },
     createdAt: 1554670800000,
+    returndate: 1555016400000,
     status: 'payment received'
   }
 ];
@@ -107,7 +113,10 @@ export const LatestOrders = (props) => (
                   </TableSortLabel>
                 </Tooltip>
               </TableCell>
-              
+              <TableCell sortDirection="desc">
+                  
+                Date of return
+              </TableCell>
               <TableCell>
                 Status
               </TableCell>
@@ -127,6 +136,9 @@ export const LatestOrders = (props) => (
                 </TableCell>
                 <TableCell>
                   {format(order.createdAt, 'dd/MM/yyyy')}
+                </TableCell>
+                <TableCell>
+                  {format(order.returndate, 'dd/MM/yyyy')}
                 </TableCell>
                 <TableCell>
                   <SeverityPill
