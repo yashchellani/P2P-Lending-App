@@ -8,7 +8,7 @@ const Settings = () => (
   <>
     <Head>
       <title>
-        Settings | Material Kit
+        Apply For a New Loan
       </title>
     </Head>
     <Box
@@ -23,7 +23,7 @@ const Settings = () => (
           sx={{ mb: 3 }}
           variant="h4"
         >
-          Settings
+          Apply For a Loan
         </Typography>
         <SettingsNotifications />
         <Box sx={{ pt: 3 }}>
