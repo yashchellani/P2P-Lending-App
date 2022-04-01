@@ -9,7 +9,7 @@ const Customers = () => (
   <>
     <Head>
       <title>
-        Borrowers
+        Loan Request
       </title>
     </Head>
     <Box
