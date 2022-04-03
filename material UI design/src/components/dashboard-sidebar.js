@@ -48,9 +48,9 @@ const items = [
     title: 'Login'
   },
   {
-    href: '/register',
+    href: '/BorrowerLoan',
     icon: (<UserAddIcon fontSize="small" />),
-    title: 'Register'
+    title: 'Borrower Loan page'
   },
   {
     href: '/404',
