@@ -168,7 +168,7 @@ export const DashboardSidebar = (props) => {
             py: 3
           }}
         >
-          <Typography
+          {/* <Typography
             color="neutral.100"
             variant="subtitle2"
           >
@@ -210,7 +210,7 @@ export const DashboardSidebar = (props) => {
             >
               Pro Live Preview
             </Button>
-          </NextLink>
+          </NextLink> */}
         </Box>
       </Box>
     </>

@@ -11,7 +11,8 @@ const Login = () => {
   const formik = useFormik({
     initialValues: {
       email: 'demo@devias.io',
-      password: 'Password123'
+      password: 'Password123',
+      type: false
     },
     validationSchema: Yup.object({
       email: Yup
@@ -20,21 +21,20 @@ const Login = () => {
           'Must be a valid email')
         .max(255)
         .required(
-          'Email is required')
-        .test('is-valid-email', 'Account does not exist.', (val) => {
-          return val == 'test@smu.edu.sg'
-        }),
+          'Email is required'),
       password: Yup
         .string()
         .max(255)
         .required(
-          'Password is required')
-        .test('is-valid-password', 'Invalid password.', (val) => {
-          return val == 'P@$$w0rd'
-        })
+          'Password is required'),
+      type: Yup
+        .bool()
+        .required()
     }),
     onSubmit: () => {
-      router.push('/');
+      if (formik.values.email == 'test@smu.edu.sg' && formik.values.password == 'password') {
+        router.push('/');
+      }
     }
   });
 

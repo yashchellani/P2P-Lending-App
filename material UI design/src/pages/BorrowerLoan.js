@@ -1,15 +1,15 @@
 import Head from 'next/head';
 import { Box, Container } from '@mui/material';
-import { CustomerListResults } from '../components/customer/customer-list-results';
-import { CustomerListToolbar } from '../components/customer/customer-list-toolbar';
+import { CustomerListResults } from '../components/customer/borrower-list-results';
+import { CustomerListToolbar } from '../components/customer/borrower-list-toolbar';
 import { DashboardLayout } from '../components/dashboard-layout';
-import { customers } from '../__mocks__/customers';
+import { customers } from '../__mocks__/BorrowerLoans';
 
 const Customers = () => (
   <>
     <Head>
       <title>
-        Loan Request
+        Lenders
       </title>
     </Head>
     <Box

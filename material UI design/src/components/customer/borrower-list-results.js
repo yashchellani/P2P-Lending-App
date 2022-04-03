@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import PropTypes from 'prop-types';
-import { format } from 'date-fns';
+import styled from "styled-components";
 import {
   Avatar,
   Box,
@@ -17,6 +17,38 @@ import {
 } from '@mui/material';
 import { getInitials } from '../../utils/get-initials';
 
+function request(){
+  alert("Request sent ");
+}
+const theme = {
+  blue: {
+    default: "#3f51b5",
+    hover: "#283593"
+  },
+  pink: {
+    default: "#e91e63",
+    hover: "#ad1457"
+  }
+};
+const Button = styled.button`
+  background-color: ${(props) => theme[props.theme].default};
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  outline: 0;
+  text-transform: uppercase;
+  margin: 10px 0px;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px lightgray;
+  transition: ease background-color 250ms;
+  &:hover {
+    background-color: ${(props) => theme[props.theme].hover};
+  }
+  &:disabled {
+    cursor: default;
+    opacity: 0.7;
+  }
+`;
 export const CustomerListResults = ({ customers, ...rest }) => {
   const [selectedCustomerIds, setSelectedCustomerIds] = useState([]);
   const [limit, setLimit] = useState(10);
@@ -69,47 +101,89 @@ export const CustomerListResults = ({ customers, ...rest }) => {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>Name</TableCell>
-                <TableCell>Email</TableCell>
-                <TableCell>Phone Number</TableCell>
-                <TableCell>Requested Loan Value</TableCell>
-                <TableCell>Requested Interest Rate</TableCell>
-                <TableCell>Loan Length</TableCell>
-                <TableCell>Expected Gains</TableCell>
-                <TableCell>Purpose of Loan</TableCell>
-                <TableCell>Status</TableCell>
+                <TableCell padding="checkbox">
+                  <Checkbox
+                    checked={selectedCustomerIds.length === customers.length}
+                    color="primary"
+                    indeterminate={
+                      selectedCustomerIds.length > 0
+                      && selectedCustomerIds.length < customers.length
+                    }
+                    onChange={handleSelectAll}
+                  />
+                </TableCell>
+                <TableCell>
+                  Name
+                </TableCell>
+                <TableCell>
+                  Email
+                </TableCell>
+                <TableCell>
+                  Maximum loan amount
+                </TableCell>
+                <TableCell>
+                  Maximum interest rate
+                </TableCell>
+                <TableCell>
+                  Maximum loan period
+                </TableCell>
+                <TableCell>
+                  Request
+                </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {customers.slice(page*limit, (page+1)*limit).map((customer) => (
+              {customers.slice(page * limit, (page + 1)* limit).map((customer) => (
                 <TableRow
                   hover
                   key={customer.id}
                   selected={selectedCustomerIds.indexOf(customer.id) !== -1}
                 >
+                  <TableCell padding="checkbox">
+                    <Checkbox
+                      checked={selectedCustomerIds.indexOf(customer.id) !== -1}
+                      onChange={(event) => handleSelectOne(event, customer.id)}
+                      value="true"
+                    />
+                  </TableCell>
                   <TableCell>
                     <Box
                       sx={{
-                        alignItems: "center",
-                        display: "flex",
+                        alignItems: 'center',
+                        display: 'flex'
                       }}
                     >
-                      <Avatar src={customer.avatarUrl} sx={{ mr: 2 }}>
+                      <Avatar
+                        src={customer.avatarUrl}
+                        sx={{ mr: 2 }}
+                      >
                         {getInitials(customer.name)}
                       </Avatar>
-                      <Typography color="textPrimary" variant="body1">
+                      <Typography
+                        color="textPrimary"
+                        variant="body1"
+                      >
                         {customer.name}
                       </Typography>
                     </Box>
                   </TableCell>
-                  <TableCell>{customer.email}</TableCell>
-                  <TableCell>{customer.phone}</TableCell>
-                  <TableCell></TableCell>
-                  <TableCell></TableCell>
-                  <TableCell></TableCell>
-                  <TableCell></TableCell>
-                  <TableCell></TableCell>
-                  <TableCell></TableCell>
+                  <TableCell>
+                    {customer.email}
+                  </TableCell>
+                  <TableCell>
+                    {customer.address}
+                  </TableCell>
+                  <TableCell>
+                    {customer.phone}
+                  </TableCell>
+                  <TableCell>
+                    {customer.createdAt}
+                  </TableCell>
+                  <TableCell>
+                    <button onClick = {request}>
+                      Send Request
+                    </button>
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -132,3 +206,5 @@ export const CustomerListResults = ({ customers, ...rest }) => {
 CustomerListResults.propTypes = {
   customers: PropTypes.array.isRequired
 };
+
+

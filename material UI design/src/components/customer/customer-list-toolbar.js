@@ -26,9 +26,9 @@ export const CustomerListToolbar = (props) => (
         sx={{ m: 1 }}
         variant="h4"
       >
-        Borrowers
+        Loan Request
       </Typography>
-      <Box sx={{ m: 1 }}>
+      {/* <Box sx={{ m: 1 }}>
         <Button
           startIcon={(<UploadIcon fontSize="small" />)}
           sx={{ mr: 1 }}
@@ -47,7 +47,7 @@ export const CustomerListToolbar = (props) => (
         >
           Add Customers
         </Button>
-      </Box>
+      </Box> */}
     </Box>
     <Box sx={{ mt: 3 }}>
       <Card>
