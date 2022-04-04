@@ -8,8 +8,12 @@ import {
   Button,
   Checkbox,
   Container,
+  FormControlLabel,
   FormHelperText,
+  FormLabel,
   Link,
+  Radio,
+  RadioGroup,
   TextField,
   Typography
 } from '@mui/material';
@@ -21,6 +25,7 @@ const Register = () => {
     initialValues: {
       email: '',
       firstName: '',
+      type: '',
       lastName: '',
       password: '',
       policy: false
@@ -38,6 +43,8 @@ const Register = () => {
         .max(255)
         .required(
           'First name is required'),
+      type: Yup
+        .string(),
       lastName: Yup
         .string()
         .max(255)
@@ -56,7 +63,16 @@ const Register = () => {
         )
     }),
     onSubmit: () => {
-      router.push('/');
+      const user = {
+        email: formik.values.email.toLowerCase(),
+        firstName: formik.values.firstName,
+        lastName: formik.values.lastName,
+        password: formik.values.password,
+        type: formik.values.type
+      };
+      localStorage.setItem(formik.values.email.toLowerCase(), JSON.stringify(user, null, 2));
+      alert('Registration successful! Please enter your username and password to log in.');
+      router.push('/login');
     }
   });
 
@@ -154,6 +170,27 @@ const Register = () => {
               value={formik.values.password}
               variant="outlined"
             />
+            <FormLabel>
+              Select Account Type:
+            </FormLabel>
+            <RadioGroup
+              fullWidth
+              label="Account Type"
+              defaultValue="Borrower"
+              name="type"
+              row
+            >
+              <FormControlLabel
+                value="borrower"
+                control={<Radio />}
+                label="Borrower"
+              />
+              <FormControlLabel
+                value="lender"
+                control={<Radio />}
+                label="Lender"
+              />
+            </RadioGroup>
             <Box
               sx={{
                 alignItems: 'center',
