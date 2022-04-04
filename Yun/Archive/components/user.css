@@ -1,0 +1,41 @@
+.button {
+    background-color:beige;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 80px 2px;
+    cursor: pointer;
+    color: black;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+}
+
+.selected {
+    background-color: black;
+    color: white;
+}
+
+.formContainer {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    background-color: white;
+    margin-top: 11%;
+
+}

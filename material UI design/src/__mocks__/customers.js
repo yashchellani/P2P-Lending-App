@@ -135,6 +135,7 @@ export const customers = [
       city: 'Salt Lake City',
       street: '368 Lamberts Branch Road'
     },
+    
     avatarUrl: '/static/images/avatars/avatar_10.png',
     createdAt: 1522702800000,
     email: 'merrile.burgett@devias.io',

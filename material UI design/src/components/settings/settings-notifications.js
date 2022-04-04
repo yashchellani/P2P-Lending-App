@@ -62,7 +62,7 @@ export const SettingsNotifications = (props) => (
             />
             <FormControlLabel
               control={<Checkbox />}
-              label="Text Messages"
+              label="Tuition Loan"
             />
             <FormControlLabel
               control={(
@@ -71,7 +71,7 @@ export const SettingsNotifications = (props) => (
                   //defaultChecked
                 />
               )}
-              label="Phone calls"
+              label="Other"
             />
           </Grid>
           <Grid
