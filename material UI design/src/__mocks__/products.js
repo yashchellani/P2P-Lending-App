@@ -1,13 +1,14 @@
 import { v4 as uuid } from 'uuid';
 
+//this is for lenders
+//first item is a template that can be used for the other items in the products list. 
 export const products = [
   {
     id: uuid(),
-    createdAt: '27/03/2019',
-    description: 'Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud.',
-    media: '/static/images/products/product_1.png',
-    title: 'Dropbox',
-    totalDownloads: '594'
+    name: 'Tommy',
+    maxAmount: 5000,
+    ir: 5.0,
+    maxPeriod: 18,
   },
   {
     id: uuid(),
