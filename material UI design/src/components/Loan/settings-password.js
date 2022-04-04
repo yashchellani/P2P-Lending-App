@@ -92,14 +92,10 @@ function LoanApplication({addLoan}){
           <Button
             color="primary"
             variant="contained"
-            type = "submit"
+            type = "submit" 
           >
             Update
           </Button>
-           {/* <input 
-          type='submit' 
-          value='Add Details' 
-        /> */}
         </Box>
       </Card>
     </form>
