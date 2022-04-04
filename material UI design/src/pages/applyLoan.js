@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { Box, Container, Typography } from '@mui/material';
 import { DashboardLayout } from '../components/dashboard-layout';
-import { SettingsNotifications } from '../components/settings/settings-notifications';
-import LoanApplication from '../components/settings/settings-password';
-import Matching from 'src/components/settings/matching';
+import { SettingsNotifications } from '../components/Loan/settings-notifications';
+import LoanApplication from '../components/Loan/settings-password';
+import Matching from 'src/components/Loan/matching';
 
 const Settings = () => (
   <>
