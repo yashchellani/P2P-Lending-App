@@ -1,84 +1,84 @@
 import { v4 as uuid } from 'uuid';
 
-export const customers = [ //This is the lenders page - Only the borrowers will be able to see this 
+export const lenders = [
   {
     id: uuid(),
-    MaxLoanAmount: 20000,
-    MaxLoanPeriod: "2 years",
+    address: 20000,
+    createdAt: "2 years",
     email: 'ekaterina.tankova@devias.io',
     name: 'Ekaterina Tankova',
-    Interest_rate: "2%"
+    phone: "2%"
   },
   {
     id: uuid(),
-    MaxLoanAmount: 2100,
-    MaxLoanPeriod: "2 months",
+    address: 2100,
+    createdAt: "2 months",
     email: 'cao.yu@devias.io',
     name: 'Cao Yu',
-    Interest_rate: '2.5%'
+    phone: '2.5%'
   },
   {
     id: uuid(),
-    MaxLoanAmount: 21231,
-    MaxLoanPeriod: "3 years",
+    address: 21231,
+    createdAt: "3 years",
     email: 'alexa.richardson@devias.io',
     name: 'Alexa Richardson',
-    Interest_rate: '1%'
+    phone: '1%'
   },
   {
     id: uuid(),
-    MaxLoanAmount: 30000,
-    MaxLoanPeriod: "1.5 years",
+    address: 30000,
+    createdAt: "1.5 years",
     email: 'anje.keizer@devias.io',
     name: 'Anje Keizer',
-    Interest_rate: '3%'
+    phone: '3%'
   },
   {
     id: uuid(),
-    MaxLoanAmount: 10000,
-    MaxLoanPeriod: "5 months",
+    address: 10000,
+    createdAt: "5 months",
     email: 'clarke.gillebert@devias.io',
     name: 'Clarke Gillebert',
-    Interest_rate: '2.5%'
+    phone: '2.5%'
   },
   {
     id: uuid(),
-    MaxLoanAmount: 25000,
-    MaxLoanPeriod: "9 months",
+    address: 25000,
+    createdAt: "9 months",
     email: 'adam.denisov@devias.io',
     name: 'Adam Denisov',
-    Interest_rate: '1.5%'
+    phone: '1.5%'
   },
   {
     id: uuid(),
-    MaxLoanAmount: 24500,
-    MaxLoanPeriod: "5 years",
+    address: 24500,
+    createdAt: "5 years",
     email: 'ava.gregoraci@devias.io',
     name: 'Ava Gregoraci',
-    Interest_rate: '0.5%'
+    phone: '0.5%'
   },
   {
     id: uuid(),
-    MaxLoanAmount: 40000,
-    MaxLoanPeriod: "2 years",
+    address: 40000,
+    createdAt: "2 years",
     email: 'emilee.simchenko@devias.io',
     name: 'Emilee Simchenko',
-    Interest_rate: '4.5%'
+    phone: '4.5%'
   },
   {
     id: uuid(),
-    MaxLoanAmount: 20000,
-    MaxLoanPeriod: "1 year",
+    address: 20000,
+    createdAt: "1 year",
     email: 'kwak.seong.min@devias.io',
     name: 'Kwak Seong-Min',
-    Interest_rate: '2%'
+    phone: '2%'
   },
   {
     id: uuid(),
-    MaxLoanAmount: 20000,
-    MaxLoanPeriod: "7 months",
+    address: 20000,
+    createdAt: "7 months",
     email: 'merrile.burgett@devias.io',
     name: 'Merrile Burgett',
-    Interest_rate: '1.3%'
+    phone: '1.3%'
   }
 ];
