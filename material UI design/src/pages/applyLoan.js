@@ -2,13 +2,14 @@ import Head from 'next/head';
 import { Box, Container, Typography } from '@mui/material';
 import { DashboardLayout } from '../components/dashboard-layout';
 import { SettingsNotifications } from '../components/settings/settings-notifications';
-import { SettingsPassword } from '../components/settings/settings-password';
+import LoanApplication from '../components/settings/settings-password';
+import Matching from 'src/components/settings/matching';
 
 const Settings = () => (
   <>
     <Head>
       <title>
-        Settings | Material Kit
+        Apply For a New Loan
       </title>
     </Head>
     <Box
@@ -23,11 +24,14 @@ const Settings = () => (
           sx={{ mb: 3 }}
           variant="h4"
         >
-          Settings
+          Apply For a Loan
         </Typography>
         <SettingsNotifications />
         <Box sx={{ pt: 3 }}>
-          <SettingsPassword />
+          <LoanApplication />
+        </Box>
+        <Box >
+          <Matching />
         </Box>
       </Container>
     </Box>

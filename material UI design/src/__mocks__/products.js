@@ -16,6 +16,7 @@ export const products = [
     media: '/static/images/products/product_2.png',
     title: 'Medium Corporation',
     totalDownloads: '625'
+    
   },
   {
     id: uuid(),

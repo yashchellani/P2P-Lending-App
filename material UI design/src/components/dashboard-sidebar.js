@@ -38,9 +38,9 @@ const items = [
     title: 'Account'
   },
   {
-    href: '/settings',
+    href: '/applyLoan',
     icon: (<CogIcon fontSize="small" />),
-    title: 'Settings'
+    title: 'New Loan'
   },
   {
     href: '/login',
@@ -124,15 +124,16 @@ export const DashboardSidebar = (props) => {
                   color="inherit"
                   variant="subtitle1"
                 >
-                  Acme Inc
+                  MoneyMate
                 </Typography>
                 <Typography
                   color="neutral.400"
                   variant="body2"
                 >
-                  Your tier
+                  Your are 
                   {' '}
-                  : Premium
+                  
+                  : Customer
                 </Typography>
               </div>
               <SelectorIcon

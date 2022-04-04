@@ -15,8 +15,8 @@ export const SettingsNotifications = (props) => (
   <form {...props}>
     <Card>
       <CardHeader
-        subheader="Manage the notifications"
-        title="Notifications"
+        subheader="Select the purpose of your loan application."
+        title="Loan Purpose"
       />
       <Divider />
       <CardContent>
@@ -40,38 +40,38 @@ export const SettingsNotifications = (props) => (
               gutterBottom
               variant="h6"
             >
-              Notifications
+              Personal Loan
             </Typography>
             <FormControlLabel
               control={(
                 <Checkbox
                   color="primary"
-                  defaultChecked
+                  //defaultChecked
                 />
               )}
-              label="Email"
+              label="Personal expenses"
             />
             <FormControlLabel
               control={(
                 <Checkbox
                   color="primary"
-                  defaultChecked
+                  //defaultChecked
                 />
               )}
-              label="Push Notifications"
+              label="Emergency expenses"
             />
             <FormControlLabel
               control={<Checkbox />}
-              label="Text Messages"
+              label="Tuition Loan"
             />
             <FormControlLabel
               control={(
                 <Checkbox
                   color="primary"
-                  defaultChecked
+                  //defaultChecked
                 />
               )}
-              label="Phone calls"
+              label="Other"
             />
           </Grid>
           <Grid
@@ -89,29 +89,29 @@ export const SettingsNotifications = (props) => (
               gutterBottom
               variant="h6"
             >
-              Messages
+              Small Business Loan
             </Typography>
             <FormControlLabel
               control={(
                 <Checkbox
                   color="primary"
-                  defaultChecked
+                  //defaultChecked
                 />
               )}
-              label="Email"
+              label="Home-based business"
             />
             <FormControlLabel
               control={<Checkbox />}
-              label="Push Notifications"
+              label="Personal passion project"
             />
             <FormControlLabel
               control={(
                 <Checkbox
                   color="primary"
-                  defaultChecked
+                  //defaultChecked
                 />
               )}
-              label="Phone calls"
+              label="Start-up"
             />
           </Grid>
         </Grid>
