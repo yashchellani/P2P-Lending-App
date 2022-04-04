@@ -5,50 +5,65 @@ import { v4 as uuid } from 'uuid';
 export const products = [
   {
     id: uuid(),
-    name: 'Tommy',
+    name: 'Tommy Shelbae',
     maxAmount: 5000,
     ir: 5.0,
     maxPeriod: 18,
   },
   {
     id: uuid(),
-    createdAt: '31/03/2019',
-    description: 'Medium is an online publishing platform developed by Evan Williams, and launched in August 2012.',
-    media: '/static/images/products/product_2.png',
-    title: 'Medium Corporation',
-    totalDownloads: '625'
-    
+    name: 'James Bind',
+    maxAmount: 15000,
+    ir: 15.0,
+    maxPeriod: 12,
   },
   {
     id: uuid(),
-    createdAt: '03/04/2019',
-    description: 'Slack is a cloud-based set of team collaboration tools and services, founded by Stewart Butterfield.',
-    media: '/static/images/products/product_3.png',
-    title: 'Slack',
-    totalDownloads: '857'
+    name: 'Al Bino',
+    maxAmount: 500,
+    ir: 1.0,
+    maxPeriod: 12,
   },
   {
     id: uuid(),
-    createdAt: '04/04/2019',
-    description: 'Lyft is an on-demand transportation company based in San Francisco, California.',
-    media: '/static/images/products/product_4.png',
-    title: 'Lyft',
-    totalDownloads: '406'
+    name: 'Tom Boat',
+    maxAmount: 150000,
+    ir: 20.0,
+    maxPeriod: 48,
   },
   {
     id: uuid(),
-    createdAt: '04/04/2019',
-    description: 'GitHub is a web-based hosting service for version control of code using Git.',
-    media: '/static/images/products/product_5.png',
-    title: 'GitHub',
-    totalDownloads: '835'
+    name: 'Jim Schrute',
+    maxAmount: 15000,
+    ir: 45.0,
+    maxPeriod: 2,
   },
   {
     id: uuid(),
-    createdAt: '04/04/2019',
-    description: 'Squarespace provides software as a service for website building and hosting. Headquartered in NYC.',
-    media: '/static/images/products/product_6.png',
-    title: 'Squarespace',
-    totalDownloads: '835'
+    name: 'Michael Scarn',
+    maxAmount: 850,
+    ir: 5.0,
+    maxPeriod: 24,
+  },
+  {
+    id: uuid(),
+    name: 'Bruce Vein',
+    maxAmount: 75000,
+    ir: 10.0,
+    maxPeriod: 36,
+  },
+  {
+    id: uuid(),
+    name: 'Elbert Anstein',
+    maxAmount: 50,
+    ir: 25.0,
+    maxPeriod: 18,
+  },
+  {
+    id: uuid(),
+    name: 'Patrick',
+    maxAmount: 50000000,
+    ir: 5.0,
+    maxPeriod: 12,
   }
 ];

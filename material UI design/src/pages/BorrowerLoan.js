@@ -22,7 +22,7 @@ const Customers = () => ( //This is the lenders page - Only the borrowers will b
       <Container maxWidth={false}>
         <CustomerListToolbar />
         <Box sx={{ mt: 3 }}>
-          <CustomerListResults lenders={lenders} />
+          <CustomerListResults customers={lenders} />
         </Box>
       </Container>
     </Box>
