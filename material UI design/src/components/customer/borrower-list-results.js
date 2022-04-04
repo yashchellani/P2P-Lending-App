@@ -151,13 +151,13 @@ export const CustomerListResults = ({ customers, ...rest }) => {
                     {customer.email}
                   </TableCell>
                   <TableCell>
-                    {customer.address}
+                    {customer.MaxLoanAmount}
                   </TableCell>
                   <TableCell>
-                    {customer.phone}
+                    {customer.Interest_rate}
                   </TableCell>
                   <TableCell>
-                    {customer.createdAt}
+                    {customer.MaxLoanPeriod}
                   </TableCell>
                   <TableCell>
                     <button onClick = {request}>
