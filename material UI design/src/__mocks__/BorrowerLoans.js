@@ -1,6 +1,6 @@
 import { v4 as uuid } from 'uuid';
 
-export const customers = [
+export const customers = [ //This is the lenders page - Only the borrowers will be able to see this 
   {
     id: uuid(),
     MaxLoanAmount: 20000,
