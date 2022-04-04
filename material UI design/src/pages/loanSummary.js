@@ -21,7 +21,7 @@ const Summary = () => (
     >
       <Container maxWidth={false}>
         <Box sx={{ mt: 3 }}>
-          <LoanSummary data={} />
+          <LoanSummary data={"dummy data"} />
         </Box>
       </Container>
     </Box>
