@@ -80,5 +80,85 @@ export const customers = [ //This is the lenders page - Only the borrowers will 
     email: 'merrile.burgett@devias.io',
     name: 'Merrile Burgett',
     Interest_rate: '1.3%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 25000,
+    MaxLoanPeriod: "6 years",
+    email: 'johndoe@gmail.com',
+    name: 'John Doe',
+    Interest_rate: "1%"
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 30000,
+    MaxLoanPeriod: "5 months",
+    email: 'JackJ@gmail.com',
+    name: 'Jack Jill',
+    Interest_rate: '3%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 50000,
+    MaxLoanPeriod: "3 years",
+    email: 'JeffB@gmail.com',
+    name: 'Jeff Bezos',
+    Interest_rate: '4%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 25000,
+    MaxLoanPeriod: "2 years",
+    email: 'ElonM@gmail.com',
+    name: 'Elon Musk',
+    Interest_rate: '3%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 10000,
+    MaxLoanPeriod: "7 months",
+    email: 'BillG@hotmail.com',
+    name: 'Bill Gates',
+    Interest_rate: '3%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 25000,
+    MaxLoanPeriod: "11 months",
+    email: 'WillS@gmail.com',
+    name: 'Will Smith',
+    Interest_rate: '2%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 100000,
+    MaxLoanPeriod: "7 years",
+    email: 'TimC@devias.io',
+    name: 'Tim Cook',
+    Interest_rate: '3%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 40000,
+    MaxLoanPeriod: "2 years",
+    email: 'MJ@devias.io',
+    name: 'Michael Jackson',
+    Interest_rate: '1%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 25000,
+    MaxLoanPeriod: "2 year",
+    email: 'ChrisCo@devias.io',
+    name: 'Christopher Columbus',
+    Interest_rate: '2%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 10000,
+    MaxLoanPeriod: "9 months",
+    email: 'AM@gmail.com',
+    name: 'Angela Merkel',
+    Interest_rate: '3.2%'
   }
 ];
