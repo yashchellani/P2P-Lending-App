@@ -5,7 +5,7 @@ import { CustomerListToolbar } from '../components/customer/borrower-list-toolba
 import { DashboardLayout } from '../components/dashboard-layout';
 import { lenders } from '../__mocks__/BorrowerLoans';
 
-const Customers = () => (
+const Customers = () => ( //This is the lenders page - Only the borrowers will be able to see this 
   <>
     <Head>
       <title>
