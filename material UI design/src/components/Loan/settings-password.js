@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Box, Button, Card, CardContent, CardHeader, Divider, TextField } from '@mui/material';
 import { AddLocationAlt } from '@mui/icons-material';
+import MatchLenders from './LenderMatches';
 
 // export const SettingsPassword = (props) => {
 //   const [values, setValues] = useState({
@@ -16,11 +17,15 @@ function LoanApplication({addLoan}){
   const [interest, setInterest] = useState(0.0);
   const [payback, setPayback] = useState(0);
 
+  useEffect(() => {
+    localStorage.setItem('loanDetails', JSON.stringify([amount, interest, payback]));
+  }, [amount, interest, payback]);
+  
   const handleSubmit = (e) => {
     addLoan([amount, interest, payback]);
     e.preventDefault();
   }
-
+  
   // const handleChange = (event) => {
   //   setValues({
   //     ...values,
@@ -84,17 +89,13 @@ function LoanApplication({addLoan}){
             p: 2
           }}
         >
-          {/* <Button
+          <Button
             color="primary"
             variant="contained"
-            type = "submit"
+            type = "submit" 
           >
             Update
-          </Button> */}
-           <input 
-          type='submit' 
-          value='Add Details' 
-        />
+          </Button>
         </Box>
       </Card>
     </form>

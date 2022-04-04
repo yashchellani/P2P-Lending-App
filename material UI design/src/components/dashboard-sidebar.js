@@ -53,9 +53,9 @@ const items = [
     title: 'Borrower Loan page'
   },
   {
-    href: '/404',
+    href: '/trial',
     icon: (<XCircleIcon fontSize="small" />),
-    title: 'Error'
+    title: 'Trial Check'
   }
 ];
 
