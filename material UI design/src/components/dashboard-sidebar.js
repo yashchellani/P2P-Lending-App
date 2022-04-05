@@ -43,11 +43,6 @@ const items = [
     title: 'New Loan'
   },
   {
-    href: '/logout',
-    icon: (<LockIcon fontSize="small" />),
-    title: 'Logout'
-  },
-  {
     href: '/BorrowerLoan',
     icon: (<UserAddIcon fontSize="small" />),
     title: 'Borrower Loan page'
@@ -56,6 +51,11 @@ const items = [
     href: '/trial',
     icon: (<XCircleIcon fontSize="small" />),
     title: 'Trial Check'
+  },
+  {
+    href: '/logout',
+    icon: (<LockIcon fontSize="small" />),
+    title: 'Logout'
   }
 ];
 
