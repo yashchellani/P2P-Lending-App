@@ -23,7 +23,7 @@ export const DashboardLayout = (props) => {
       <DashboardLayoutRoot>
         <Box
           sx={{
-            display: 'flex',
+            display: 'flex-grow',
             flex: '1 1 auto',
             flexDirection: 'column',
             width: '100%'

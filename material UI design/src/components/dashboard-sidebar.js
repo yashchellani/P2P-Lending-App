@@ -20,7 +20,6 @@ var userType = 'default';
 if (typeof window !== 'undefined') {
   userType = localStorage.getItem('userType');
 }
-console.log(userType)
 var items = [];
 if (userType == 'borrower') {
   items = [
