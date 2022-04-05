@@ -3,162 +3,162 @@ import { v4 as uuid } from 'uuid';
 export const lenders = [
   {
     id: uuid(),
-    address: 20000,
-    createdAt: "2 years",
+    MaxLoanAmount: 20000,
+    MaxLoanPeriod: "24",
     email: 'ekaterina.tankova@devias.io',
     name: 'Ekaterina Tankova',
-    phone: "2%"
+    Max_Interest_rate: "2%"
   },
   {
     id: uuid(),
-    address: 2100,
-    createdAt: "2 months",
+    MaxLoanAmount: 2100,
+    MaxLoanPeriod: "2",
     email: 'cao.yu@devias.io',
     name: 'Cao Yu',
-    phone: '2.5%'
+    Max_Interest_rate: '2.5%'
   },
   {
     id: uuid(),
-    address: 21231,
-    createdAt: "3 years",
+    MaxLoanAmount: 21231,
+    MaxLoanPeriod: "36",
     email: 'alexa.richardson@devias.io',
     name: 'Alexa Richardson',
-    phone: '1%'
-  },
-  {
-    id: uuid(),
-    address: 30000,
-    createdAt: "1.5 years",
-    email: 'anje.keizer@devias.io',
-    name: 'Anje Keizer',
-    phone: '3%'
-  },
-  {
-    id: uuid(),
-    address: 10000,
-    createdAt: "5 months",
-    email: 'clarke.gillebert@devias.io',
-    name: 'Clarke Gillebert',
-    phone: '2.5%'
-  },
-  {
-    id: uuid(),
-    address: 25000,
-    createdAt: "9 months",
-    email: 'adam.denisov@devias.io',
-    name: 'Adam Denisov',
-    phone: '1.5%'
-  },
-  {
-    id: uuid(),
-    address: 24500,
-    createdAt: "5 years",
-    email: 'ava.gregoraci@devias.io',
-    name: 'Ava Gregoraci',
-    phone: '0.5%'
-  },
-  {
-    id: uuid(),
-    address: 40000,
-    createdAt: "2 years",
-    email: 'emilee.simchenko@devias.io',
-    name: 'Emilee Simchenko',
-    phone: '4.5%'
-  },
-  {
-    id: uuid(),
-    address: 20000,
-    createdAt: "1 year",
-    email: 'kwak.seong.min@devias.io',
-    name: 'Kwak Seong-Min',
-    phone: '2%'
-  },
-  {
-    id: uuid(),
-    address: 20000,
-    createdAt: "7 months",
-    email: 'merrile.burgett@devias.io',
-    name: 'Merrile Burgett',
-    Interest_rate: '1.3%'
-  },
-  {
-    id: uuid(),
-    MaxLoanAmount: 25000,
-    MaxLoanPeriod: "6 years",
-    email: 'johndoe@gmail.com',
-    name: 'John Doe',
-    Interest_rate: "1%"
+    Max_Interest_rate: '1%'
   },
   {
     id: uuid(),
     MaxLoanAmount: 30000,
-    MaxLoanPeriod: "5 months",
-    email: 'JackJ@gmail.com',
-    name: 'Jack Jill',
-    Interest_rate: '3%'
-  },
-  {
-    id: uuid(),
-    MaxLoanAmount: 50000,
-    MaxLoanPeriod: "3 years",
-    email: 'JeffB@gmail.com',
-    name: 'Jeff Bezos',
-    Interest_rate: '4%'
-  },
-  {
-    id: uuid(),
-    MaxLoanAmount: 25000,
-    MaxLoanPeriod: "2 years",
-    email: 'ElonM@gmail.com',
-    name: 'Elon Musk',
-    Interest_rate: '3%'
+    MaxLoanPeriod: "16",
+    email: 'anje.keizer@devias.io',
+    name: 'Anje Keizer',
+    Max_Interest_rate: '3%'
   },
   {
     id: uuid(),
     MaxLoanAmount: 10000,
-    MaxLoanPeriod: "7 months",
-    email: 'BillG@hotmail.com',
-    name: 'Bill Gates',
-    Interest_rate: '3%'
+    MaxLoanPeriod: "5",
+    email: 'clarke.gillebert@devias.io',
+    name: 'Clarke Gillebert',
+    Max_Interest_rate: '2.5%'
   },
   {
     id: uuid(),
     MaxLoanAmount: 25000,
-    MaxLoanPeriod: "11 months",
-    email: 'WillS@gmail.com',
-    name: 'Will Smith',
-    Interest_rate: '2%'
+    MaxLoanPeriod: "9",
+    email: 'adam.denisov@devias.io',
+    name: 'Adam Denisov',
+    Max_Interest_rate: '1.5%'
   },
   {
     id: uuid(),
-    MaxLoanAmount: 100000,
-    MaxLoanPeriod: "7 years",
-    email: 'TimC@devias.io',
-    name: 'Tim Cook',
-    Interest_rate: '3%'
+    MaxLoanAmount: 24500,
+    MaxLoanPeriod: "16",
+    email: 'ava.gregoraci@devias.io',
+    name: 'Ava Gregoraci',
+    Max_Interest_rate: '0.5%'
   },
   {
     id: uuid(),
     MaxLoanAmount: 40000,
-    MaxLoanPeriod: "2 years",
-    email: 'MJ@devias.io',
-    name: 'Michael Jackson',
-    Interest_rate: '1%'
+    MaxLoanPeriod: "24",
+    email: 'emilee.simchenko@devias.io',
+    name: 'Emilee Simchenko',
+    Max_Interest_rate: '4.5%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 20000,
+    MaxLoanPeriod: "12",
+    email: 'kwak.seong.min@devias.io',
+    name: 'Kwak Seong-Min',
+    Max_Interest_rate: '2%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 20000,
+    MaxLoanPeriod: "7",
+    email: 'merrile.burgett@devias.io',
+    name: 'Merrile Burgett',
+    Max_Interest_rate: '1.3%'
   },
   {
     id: uuid(),
     MaxLoanAmount: 25000,
-    MaxLoanPeriod: "2 year",
-    email: 'ChrisCo@devias.io',
-    name: 'Christopher Columbus',
-    Interest_rate: '2%'
+    MaxLoanPeriod: "21",
+    email: 'johndoe@gmail.com',
+    name: 'John Doe',
+    Max_Interest_rate: "1%"
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 30000,
+    MaxLoanPeriod: "5",
+    email: 'JackJ@gmail.com',
+    name: 'Jack Jill',
+    Max_Interest_rate: '3%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 50000,
+    MaxLoanPeriod: "18",
+    email: 'JeffB@gmail.com',
+    name: 'Jeff Bezos',
+    Max_Interest_rate: '4%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 25000,
+    MaxLoanPeriod: "24",
+    email: 'ElonM@gmail.com',
+    name: 'Elon Musk',
+    Max_Interest_rate: '3%'
   },
   {
     id: uuid(),
     MaxLoanAmount: 10000,
-    MaxLoanPeriod: "9 months",
+    MaxLoanPeriod: "7",
+    email: 'BillG@hotmail.com',
+    name: 'Bill Gates',
+    Max_Interest_rate: '3%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 25000,
+    MaxLoanPeriod: "11",
+    email: 'WillS@gmail.com',
+    name: 'Will Smith',
+    Max_Interest_rate: '2%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 100000,
+    MaxLoanPeriod: "48",
+    email: 'TimC@devias.io',
+    name: 'Tim Cook',
+    Max_Interest_rate: '3%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 40000,
+    MaxLoanPeriod: "24",
+    email: 'MJ@devias.io',
+    name: 'Michael Jackson',
+    Max_Interest_rate: '1%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 25000,
+    MaxLoanPeriod: "28",
+    email: 'ChrisCo@devias.io',
+    name: 'Christopher Columbus',
+    Max_Interest_rate: '2%'
+  },
+  {
+    id: uuid(),
+    MaxLoanAmount: 10000,
+    MaxLoanPeriod: "8",
     email: 'AM@gmail.com',
     name: 'Angela Merkel',
-    Interest_rate: '3.2%'
+    Max_Interest_rate: '3.2%'
   }
 ];

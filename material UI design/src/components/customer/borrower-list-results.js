@@ -154,7 +154,7 @@ export const CustomerListResults = ({ customers, ...rest }) => {
                     {customer.MaxLoanAmount}
                   </TableCell>
                   <TableCell>
-                    {customer.Interest_rate}
+                    {customer.Max_Interest_rate}
                   </TableCell>
                   <TableCell>
                     {customer.MaxLoanPeriod}

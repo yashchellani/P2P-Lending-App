@@ -32,8 +32,105 @@ export const customers = [
     amount: 2500,
     ir: 13,
     period: 6,
-    purpose: '3309704-428-'
+    purpose: 'Equipment fees'
   },
+  {
+    id: uuid(),
+    name: 'Cleon',
+    amount: 15000,
+    ir: 2,
+    period: 24,
+    purpose: 'Startup'
+  },
+  {
+    id: uuid(),
+    name: 'Abishek',
+    amount: 10000,
+    ir: 5,
+    period: 18,
+    purpose: 'Tuition Fees'
+  },
+  {
+    id: uuid(),
+    name: 'Chris',
+    amount: 100,
+    ir: 2,
+    period: 4,
+    purpose: 'Personal Expenses'
+  },
+  {
+    id: uuid(),
+    name: 'Yun',
+    amount: 2500,
+    ir: 13,
+    period: 6,
+    purpose: 'Tuition fees'
+  },
+  {
+    id: uuid(),
+    name: 'Yash',
+    amount: 15000,
+    ir: 5.0,
+    period: 18,
+    purpose: 'Startup'
+  },
+  {
+    id: uuid(),
+    name: 'Sebastian',
+    amount: 100000,
+    ir: 3,
+    period: 20,
+    purpose: 'Startup'
+  },
+  {
+    id: uuid(),
+    name: 'Michael',
+    amount: 100,
+    ir: 3,
+    period: 3,
+    purpose: 'Personal Expenses'
+  },
+  {
+    id: uuid(),
+    name: 'Jeremy',
+    amount: 2500,
+    ir: 3,
+    period: 6,
+    purpose: 'Film making'
+  },
+  {
+    id: uuid(),
+    name: 'Clay',
+    amount: 25000,
+    ir: 5.0,
+    period: 21,
+    purpose: 'Startup'
+  },
+  {
+    id: uuid(),
+    name: 'Leslie',
+    amount: 12000,
+    ir: 3,
+    period: 9,
+    purpose: 'Tuition Fees'
+  },
+  {
+    id: uuid(),
+    name: 'James',
+    amount: 100,
+    ir: 20,
+    period: 3,
+    purpose: 'Personal Expenses'
+  },
+  {
+    id: uuid(),
+    name: 'ohn',
+    amount: 2500,
+    ir: 13,
+    period: 6,
+    purpose: 'Personal Expenses'
+  },
+
   {
     id: uuid(),
     address: {
