@@ -4,6 +4,7 @@ import { DashboardLayout } from '../components/dashboard-layout';
 import { SettingsNotifications } from '../components/Loan/settings-notifications';
 import LoanApplication from '../components/Loan/settings-password';
 import MatchLenders from 'src/components/Loan/LenderMatches';
+import LenderMatching from 'src/components/Loan/LendersPreferenceDisplay';
 
 const FormDisplay = () => (
   <>
@@ -24,11 +25,11 @@ const FormDisplay = () => (
           sx={{ mb: 3 }}
           variant="h4"
         >
-          Apply For a Loan
+          Lender Profile
         </Typography>
         <Box >
         </Box>
-        <MatchLenders /> 
+        <LenderMatching /> 
         <Box >
           
         </Box>
@@ -37,7 +38,7 @@ const FormDisplay = () => (
   </>
 );
 
-Settings.getLayout = (page) => (
+FormDisplay.getLayout = (page) => (
   <DashboardLayout>
     {page}
   </DashboardLayout>

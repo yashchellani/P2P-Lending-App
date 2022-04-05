@@ -130,26 +130,6 @@ export const customers = [
     period: 6,
     purpose: 'Personal Expenses'
   },
-
-  {
-    id: uuid(),
-    address: {
-      country: 'USA',
-      state: 'Texas',
-      city: 'Dallas',
-      street: '75247'
-    },
-    avatarUrl: '/static/images/avatars/avatar_6.png',
-    createdAt: 1554757200000,
-    email: 'clarke.gillebert@devias.io',
-    name: 'Clarke Gillebert',
-    phone: '972-333-4106'
-    name: 'James Lee',
-    amount: 15000,
-    ir: 20,
-    period: 3,
-    purpose: 'Startup'
-  },
   {
     id: uuid(),
     name: 'Cartman',
