@@ -67,6 +67,14 @@ export const DashboardSidebar = (props) => {
     noSsr: false
   });
 
+  
+  if (typeof window !== 'undefined') {
+    if (localStorage.getItem("active") == null) {
+      alert("Please log in.");
+      router.push("/login");
+    }
+  }
+
   useEffect(
     () => {
       if (!router.isReady) {
@@ -130,7 +138,7 @@ export const DashboardSidebar = (props) => {
                   color="neutral.400"
                   variant="body2"
                 >
-                  Your are 
+                  You are 
                   {' '}
                   
                   : Customer
