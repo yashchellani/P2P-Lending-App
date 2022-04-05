@@ -27,28 +27,9 @@ export const ProductListToolbar = (props) => (
         sx={{ m: 1 }}
         variant="h4"
       >
-        Products
+        Commonly Asked Questions
       </Typography>
-      <Box sx={{ m: 1 }}>
-        <Button
-          startIcon={(<UploadIcon fontSize="small" />)}
-          sx={{ mr: 1 }}
-        >
-          Import
-        </Button>
-        <Button
-          startIcon={(<DownloadIcon fontSize="small" />)}
-          sx={{ mr: 1 }}
-        >
-          Export
-        </Button>
-        <Button
-          color="primary"
-          variant="contained"
-        >
-          Add products
-        </Button>
-      </Box>
+      
     </Box>
     <Box sx={{ mt: 3 }}>
       <Card>
@@ -68,7 +49,7 @@ export const ProductListToolbar = (props) => (
                   </InputAdornment>
                 )
               }}
-              placeholder="Search product"
+              placeholder="Search"
               variant="outlined"
             />
           </Box>

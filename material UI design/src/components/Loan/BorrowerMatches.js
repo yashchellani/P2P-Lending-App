@@ -57,7 +57,12 @@ function MatchBorrowers(){
     useEffect (() =>{
         const items = JSON.parse(localStorage.getItem('lenderDetails'));
         //console.log("This part has been run")
-        console.log(items[0])
+        try {
+          console.log(items[0])
+        } catch (error) {
+          console.log("error");
+        }
+        //console.log(items[0])
         if (items){
             setItems(items);
         }
