@@ -287,17 +287,17 @@ export const DashboardSidebar = (props) => {
             py: 3
           }}
         >
-          {/* <Typography
+          <Typography
             color="neutral.100"
             variant="subtitle2"
           >
-            Need more features?
+            Have feedback about the app?
           </Typography>
           <Typography
             color="neutral.500"
             variant="body2"
           >
-            Check out our Pro solution template.
+            Click on the link below to submit!
           </Typography>
           <Box
             sx={{
@@ -316,7 +316,7 @@ export const DashboardSidebar = (props) => {
             />
           </Box>
           <NextLink
-            href="https://material-kit-pro-react.devias.io/"
+            href="https://forms.gle/t1SDNR2WDsy5rM3t8"
             passHref
           >
             <Button
@@ -327,9 +327,9 @@ export const DashboardSidebar = (props) => {
               sx={{ mt: 2 }}
               variant="contained"
             >
-              Pro Live Preview
+              Feedback
             </Button>
-          </NextLink> */}
+          </NextLink>
         </Box>
       </Box>
     </>
