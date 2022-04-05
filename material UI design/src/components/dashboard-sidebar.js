@@ -29,16 +29,7 @@ if (userType == 'borrower') {
       icon: (<ChartBarIcon fontSize="small" />),
       title: 'Dashboard'
     },
-    // {
-    //   href: '/customers',
-    //   icon: (<UsersIcon fontSize="small" />),
-    //   title: 'Borrowers'
-    // },
-    {
-      href: '/products',
-      icon: (<UserIcon fontSize="small" />),
-      title: 'FAQ'
-    },
+
     {
       href: '/account',
       icon: (<UserIcon fontSize="small" />),
@@ -54,6 +45,11 @@ if (userType == 'borrower') {
       href: '/matchedLenders',
       icon: (<XCircleIcon fontSize="small" />),
       title: 'Find Lenders'
+    },
+    {
+      href: '/products',
+      icon: (<UserIcon fontSize="small" />),
+      title: 'FAQ'
     },
     {
       href: '/logout',
@@ -102,6 +98,11 @@ else if (userType == "lender"){
       title: 'Find Borrowers'
     },
     {
+      href: '/products',
+      icon: (<UserIcon fontSize="small" />),
+      title: 'FAQ'
+    },
+    {
       href: '/logout',
       icon: (<LockIcon fontSize="small" />),
       title: 'Logout'
@@ -109,7 +110,7 @@ else if (userType == "lender"){
   ];
 }
 else{
-const items = [
+  items = [
   {
     href: '/',
     icon: (<ChartBarIcon fontSize="small" />),
@@ -157,10 +158,16 @@ const items = [
     title: 'Find Borrowers'
   },
   {
+    href: '/products',
+    icon: (<UserIcon fontSize="small" />),
+    title: 'FAQ'
+  },
+  {
     href: '/logout',
     icon: (<LockIcon fontSize="small" />),
     title: 'Logout'
   }
+
 ];
 }
 
@@ -243,11 +250,9 @@ export const DashboardSidebar = (props) => {
                   color="neutral.400"
                   variant="body2"
                 >
-                  You are 
-                  {' '}
-                  
-                  : Customer
-                </Typography>
+                  {userType}
+                       
+                   </Typography>
               </div>
               <SelectorIcon
                 sx={{
