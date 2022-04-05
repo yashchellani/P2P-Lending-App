@@ -43,9 +43,9 @@ const items = [
     title: 'New Loan'
   },
   {
-    href: '/login',
+    href: '/logout',
     icon: (<LockIcon fontSize="small" />),
-    title: 'Login'
+    title: 'Logout'
   },
   {
     href: '/BorrowerLoan',
