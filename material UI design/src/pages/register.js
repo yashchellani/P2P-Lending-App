@@ -80,7 +80,7 @@ const Register = () => {
     <>
       <Head>
         <title>
-          Register | Material Kit
+          Register | MoneyMate
         </title>
       </Head>
       <Box
@@ -184,11 +184,15 @@ const Register = () => {
                 value="borrower"
                 control={<Radio />}
                 label="Borrower"
+                onChange={(e, value)=>localStorage.setItem('userType', "borrower")
+                }
               />
               <FormControlLabel
                 value="lender"
                 control={<Radio />}
                 label="Lender"
+                onChange={(e, value)=>localStorage.setItem('userType', "lender")
+               }
               />
             </RadioGroup>
             <Box

@@ -12,15 +12,12 @@ import MatchLenders from './LenderMatches';
 import LenderProfile from './updateLender';
 
 
-function Matching(props){
+function LenderMatching(props){
     const [lenderDetails, setLoanDetails] = useState([]);
     const addLoan = (loanApp) => {
         let loanApps = [...lenderDetails, loanApp];
         setLoanDetails(loanApps);
     }
-    // const toComponentB=()=>{
-    //     navigate('/matchingChart',{state:[20, 10, 100]});
-    //       }
 
     return (
         <section>
@@ -30,4 +27,4 @@ function Matching(props){
     );
 }
 
-export default Matching;
+export default LenderMatching;

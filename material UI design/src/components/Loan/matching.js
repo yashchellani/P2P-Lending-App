@@ -17,17 +17,10 @@ function Matching(props){
         let loanApps = [...loanDetails, loanApp];
         setLoanDetails(loanApps);
     }
-    // const toComponentB=()=>{
-    //     navigate('/matchingChart',{state:[20, 10, 100]});
-    //       }
 
     return (
         <section>
             <LoanApplication addLoan = {addLoan} />
-            
-            {/* <div>
-                <Button onClick={()=>{toComponentB()}}>Send Request</Button>
-            </div> */}
             
         </section>
     );

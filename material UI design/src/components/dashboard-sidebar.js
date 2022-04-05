@@ -16,17 +16,110 @@ import { XCircle as XCircleIcon } from '../icons/x-circle';
 import { Logo } from './logo';
 import { NavItem } from './nav-item';
 
+var userType = 'default';
+if (typeof window !== 'undefined') {
+  userType = localStorage.getItem('userType');
+}
+console.log(userType)
+var items = [];
+if (userType == 'borrower') {
+  items = [
+    {
+      href: '/',
+      icon: (<ChartBarIcon fontSize="small" />),
+      title: 'Dashboard'
+    },
+    // {
+    //   href: '/customers',
+    //   icon: (<UsersIcon fontSize="small" />),
+    //   title: 'Borrowers'
+    // },
+    {
+      href: '/products',
+      icon: (<UserIcon fontSize="small" />),
+      title: 'FAQ'
+    },
+    {
+      href: '/account',
+      icon: (<UserIcon fontSize="small" />),
+      title: 'Account'
+    },
+    {
+      href: '/applyLoan',
+      icon: (<CogIcon fontSize="small" />),
+      title: 'New Loan'
+    },
+  
+    {
+      href: '/matchedLenders',
+      icon: (<XCircleIcon fontSize="small" />),
+      title: 'Find Lenders'
+    },
+    {
+      href: '/logout',
+      icon: (<LockIcon fontSize="small" />),
+      title: 'Logout'
+    }
+  ];
+}
+else if (userType == "lender"){
+  items = [
+    {
+      href: '/',
+      icon: (<ChartBarIcon fontSize="small" />),
+      title: 'Dashboard'
+    },
+    // {
+    //   href: '/customers',
+    //   icon: (<UsersIcon fontSize="small" />),
+    //   title: 'Borrowers'
+    // },
+    {
+      href: '/products',
+      icon: (<ShoppingBagIcon fontSize="small" />),
+      title: 'Products'
+    },
+    {
+      href: '/account',
+      icon: (<UserIcon fontSize="small" />),
+      title: 'Account'
+    },
+    {
+      href: '/updateLenderProfile',
+      icon: (<CogIcon fontSize="small" />),
+      title: 'Update Lender Profile'
+    },
+   
+    // {
+    //   href: '/BorrowerLoan',
+    //   icon: (<UserAddIcon fontSize="small" />),
+    //   title: 'Borrower Loan page'
+    // },
+  
+    {
+      href: '/matchedBorrowers',
+      icon: (<XCircleIcon fontSize="small" />),
+      title: 'Find Borrowers'
+    },
+    {
+      href: '/logout',
+      icon: (<LockIcon fontSize="small" />),
+      title: 'Logout'
+    }
+  ];
+}
+else{
 const items = [
   {
     href: '/',
     icon: (<ChartBarIcon fontSize="small" />),
     title: 'Dashboard'
   },
-  {
-    href: '/customers',
-    icon: (<UsersIcon fontSize="small" />),
-    title: 'Borrowers'
-  },
+  // {
+  //   href: '/customers',
+  //   icon: (<UsersIcon fontSize="small" />),
+  //   title: 'Borrowers'
+  // },
   {
     href: '/products',
     icon: (<ShoppingBagIcon fontSize="small" />),
@@ -47,22 +140,29 @@ const items = [
     icon: (<CogIcon fontSize="small" />),
     title: 'Update Lender Profile'
   },
+ 
+  // {
+  //   href: '/BorrowerLoan',
+  //   icon: (<UserAddIcon fontSize="small" />),
+  //   title: 'Borrower Loan page'
+  // },
+  {
+    href: '/matchedLenders',
+    icon: (<XCircleIcon fontSize="small" />),
+    title: 'Find Lenders'
+  },
+  {
+    href: '/matchedBorrowers',
+    icon: (<XCircleIcon fontSize="small" />),
+    title: 'Find Borrowers'
+  },
   {
     href: '/logout',
     icon: (<LockIcon fontSize="small" />),
     title: 'Logout'
-  },
-  {
-    href: '/BorrowerLoan',
-    icon: (<UserAddIcon fontSize="small" />),
-    title: 'Borrower Loan page'
-  },
-  {
-    href: '/trial',
-    icon: (<XCircleIcon fontSize="small" />),
-    title: 'Find Lenders'
   }
 ];
+}
 
 export const DashboardSidebar = (props) => {
   const { open, onClose } = props;

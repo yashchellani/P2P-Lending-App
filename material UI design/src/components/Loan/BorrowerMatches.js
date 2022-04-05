@@ -3,10 +3,11 @@
 import { useEffect, useState } from 'react';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import PropTypes from 'prop-types';
-import { products } from 'src/__mocks__/products';
+import { customers } from 'src/__mocks__/customers';
 import {
   Avatar,
   Box,
+  Button,
   Card,
   Checkbox,
   Table,
@@ -17,7 +18,6 @@ import {
   TableRow,
   Typography
 } from '@mui/material';
-import { getInitials } from '../../utils/get-initials';
 
 function request(){
   alert("Request sent ");
@@ -33,14 +33,15 @@ const theme = {
   }
 };
 
-function MatchLenders(){
-    const myList = products;
+function MatchBorrowers(){
+    const myList = customers;
+    console.log(myList[0])
     const [items, setItems] = useState([]);
 
     useEffect (() =>{
-        const items = JSON.parse(localStorage.getItem('loanDetails'));
-        console.log("This part has been run")
-        console.log(items)
+        const items = JSON.parse(localStorage.getItem('lenderDetails'));
+        //console.log("This part has been run")
+        console.log(items[0])
         if (items){
             setItems(items);
         }
@@ -53,24 +54,23 @@ function MatchLenders(){
         //     .map(element => <li key = {element.id}>{[element.name, "  ", element.maxAmount, "  ",element.ir,"  ", element.maxPeriod]}</li>)
         // }
         // </ul>
+
       <Box sx={{ minWidth: 1050 }}>
       <Table>
         <TableHead>
           <TableRow>
             <TableCell>ID</TableCell>
             <TableCell>Name</TableCell>
-            <TableCell>Max Amount</TableCell>
-            <TableCell>Minimum Interest Rate</TableCell>
-            <TableCell>Max Loan Period</TableCell>
-            <TableCell>Apply</TableCell>
-            {/* <TableCell>Expected Gains</TableCell>
-            <TableCell>Purpose of Loan</TableCell>
-            <TableCell>Status</TableCell> */}
+            <TableCell>Amount Requested</TableCell>
+            <TableCell>Interest Rate</TableCell>
+            <TableCell>Loan Period</TableCell>
+            <TableCell>Purpose</TableCell>
+            <TableCell>Accept</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
         {
-        myList.filter(element => element.maxAmount >= parseInt(items[0]) && element.ir <= parseInt(items[1]) && element.maxPeriod >= parseInt(items[2]))
+         myList.filter(element => element.amount <= parseInt(items[0]) && element.ir >= parseInt(items[1]) && element.period <= parseInt(items[2]))
             .map(element => (
             <TableRow
               hover
@@ -90,11 +90,15 @@ function MatchLenders(){
                 </Box>
               </TableCell>
               <TableCell>{element.name}</TableCell>
-              <TableCell>{element.maxAmount}</TableCell>
+              <TableCell>{element.amount}</TableCell>
               <TableCell>{element.ir}</TableCell>
-              <TableCell>{element.maxPeriod}</TableCell>
+              <TableCell>{element.period}</TableCell>
+              <TableCell>{element.purpose}</TableCell>
               <TableCell>
-                <p>Apply</p>
+                <Button
+                    >
+                    Accept
+                </Button>
               </TableCell>
             </TableRow>
           ))}
@@ -104,6 +108,6 @@ function MatchLenders(){
     )
 }
 
-export default MatchLenders
+export default MatchBorrowers
 
 

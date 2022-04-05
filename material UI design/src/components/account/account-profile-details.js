@@ -29,14 +29,17 @@ const states = [
 //update user profile details here
 
 export const AccountProfileDetails = (props) => {
+  const items = JSON.parse(localStorage.getItem('user'));
   const [values, setValues] = useState({
-    firstName: 'Katarina',
-    lastName: 'Smith',
-    email: 'demo@devias.io',
+    firstName: 'Yun Waddy',
+    lastName: 'Soe',
+    email: items.username,
     phone: '',
-    state: 'Alabama',
-    country: 'USA'
+    state: 'Singapore',
+    country: 'Singapore'
   });
+
+  
 
   const handleChange = (event) => {
     setValues({

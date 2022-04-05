@@ -6,11 +6,11 @@ import LoanApplication from '../components/Loan/settings-password';
 import Matching from 'src/components/Loan/matching';
 import MatchLenders from 'src/components/Loan/LenderMatches';
 
-const Settings = () => (
+const Settings2 = () => (
   <>
     <Head>
       <title>
-        Apply For a New Loan
+        Check loan
       </title>
     </Head>
     <Box
@@ -25,13 +25,12 @@ const Settings = () => (
           sx={{ mb: 3 }}
           variant="h4"
         >
-          Apply For a Loan
+          Select a lender
         </Typography>
-        <SettingsNotifications />
         <Box >
-          <Matching />
+          
         </Box>
-         <MatchLenders /> 
+        <MatchLenders /> 
         <Box >
           
         </Box>
@@ -40,10 +39,10 @@ const Settings = () => (
   </>
 );
 
-Settings.getLayout = (page) => (
+Settings2.getLayout = (page) => (
   <DashboardLayout>
     {page}
   </DashboardLayout>
 );
 
-export default Settings;
+export default Settings2;

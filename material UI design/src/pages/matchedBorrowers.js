@@ -4,9 +4,10 @@ import { DashboardLayout } from '../components/dashboard-layout';
 import { SettingsNotifications } from '../components/Loan/settings-notifications';
 import LoanApplication from '../components/Loan/settings-password';
 import Matching from 'src/components/Loan/matching';
-import MatchLenders from 'src/components/Loan/LenderMatches';
+import MatchBorrowers from 'src/components/Loan/BorrowerMatches';
 
-const Settings2 = () => (
+
+const BorrowerDisplay = () => (
   <>
     <Head>
       <title>
@@ -25,12 +26,12 @@ const Settings2 = () => (
           sx={{ mb: 3 }}
           variant="h4"
         >
-          Check loan details
+          Select a borrower
         </Typography>
         <Box >
           
         </Box>
-        <MatchLenders /> 
+        <MatchBorrowers /> 
         <Box >
           
         </Box>
@@ -39,10 +40,10 @@ const Settings2 = () => (
   </>
 );
 
-Settings2.getLayout = (page) => (
+BorrowerDisplay.getLayout = (page) => (
   <DashboardLayout>
     {page}
   </DashboardLayout>
 );
 
-export default Settings2;
+export default BorrowerDisplay;
