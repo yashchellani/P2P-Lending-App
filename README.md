@@ -1,7 +1,7 @@
 # P2P-Lending-App-
 
 ##Installation
-To install all the dependencies, run the following command un the same directory as this readme. 
+To install all the dependencies, run the following command in the same directory as this readme. 
 
 ```
 npm install
@@ -25,7 +25,7 @@ npm run dev
 ## IMPORTANT
 To view the project, YOU MUST start your journey at the register page. This is to ensure that all the in-browser memmory objects are populated along the way. 
 
-To do so, run the following in your browser (for both Borrower and Lender views):
+To do so, run the following in your browser (for both Borrower and Lender views) first:
 
 http://localhost:3000/register
 
