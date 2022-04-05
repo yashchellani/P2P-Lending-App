@@ -3,16 +3,15 @@ import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { Box, Button, Container, Grid, Link, TextField, Typography } from '@mui/material';
+import { Box, Button, Container, Link, TextField, Typography } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Login = () => {
   const router = useRouter();
   const formik = useFormik({
     initialValues: {
-      email: 'demo@devias.io',
-      password: 'Password123',
-      type: false
+      email: '',
+      password: ''
     },
     validationSchema: Yup.object({
       email: Yup
@@ -26,13 +25,18 @@ const Login = () => {
         .string()
         .max(255)
         .required(
-          'Password is required'),
-      type: Yup
-        .bool()
-        .required()
+          'Password is required')
     }),
     onSubmit: () => {
-      if (formik.values.email == 'test@smu.edu.sg' && formik.values.password == 'password') {
+      var userData = localStorage.getItem(formik.values.email.toLowerCase());
+      if (userData == null || userData == '') {
+        alert('Email does not exist!');
+        location.reload();
+      } else if (formik.values.password.valueOf() != JSON.parse(userData).password.valueOf()) {
+        alert('Invalid password!');
+        location.reload();
+      } else {
+        localStorage.setItem('active', formik.values.email.toLowerCase());
         router.push('/');
       }
     }
