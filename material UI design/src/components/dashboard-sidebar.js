@@ -43,6 +43,11 @@ const items = [
     title: 'New Loan'
   },
   {
+    href: '/updateLenderProfile',
+    icon: (<CogIcon fontSize="small" />),
+    title: 'Update Lender Profile'
+  },
+  {
     href: '/logout',
     icon: (<LockIcon fontSize="small" />),
     title: 'Logout'
@@ -55,7 +60,7 @@ const items = [
   {
     href: '/trial',
     icon: (<XCircleIcon fontSize="small" />),
-    title: 'Trial Check'
+    title: 'Find Lenders'
   }
 ];
 

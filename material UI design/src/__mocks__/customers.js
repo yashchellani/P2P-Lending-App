@@ -4,11 +4,11 @@ import { v4 as uuid } from 'uuid';
 export const customers = [
   {
     id: uuid(),
-    name: 'Tommy',
-    amount: 5000,
-    ir: 5.0,
+    name: 'Yash',
+    amount: 15000,
+    ir: 15.0,
     period: 18,
-    purpose: 'Startup'
+    purpose: 'Startup venture'
   },
   {
     id: uuid(),
@@ -24,7 +24,7 @@ export const customers = [
     amount: 100,
     ir: 20,
     period: 3,
-    purpose: 'Personal Expenses'
+    purpose: 'Personal expenses'
   },
   {
     id: uuid(),
@@ -144,45 +144,58 @@ export const customers = [
     email: 'clarke.gillebert@devias.io',
     name: 'Clarke Gillebert',
     phone: '972-333-4106'
+    name: 'James Lee',
+    amount: 15000,
+    ir: 20,
+    period: 3,
+    purpose: 'Startup'
   },
   {
     id: uuid(),
-    name: '',
-    amount: 1555016400000,
-    ir: 'ekaterina.tankova@devias.io',
-    period: 'Ekaterina Tankova',
-    purpose: '304-428-3097'
+    name: 'Cartman',
+    amount: 100,
+    ir: 20,
+    period: 3,
+    purpose: 'Personal expenses'
   },
   {
     id: uuid(),
-    name: '',
-    amount: 1555016400000,
-    ir: 'ekaterina.tankova@devias.io',
-    period: 'Ekaterina Tankova',
-    purpose: '304-428-3097'
+    name: 'Timothy',
+    amount: 2500,
+    ir: 12,
+    period: 12,
+    purpose: 'Emergency expenses'
   },
   {
     id: uuid(),
-    name: '',
-    amount: 1555016400000,
-    ir: 'ekaterina.tankova@devias.io',
-    period: 'Ekaterina Tankova',
-    purpose: '304-428-3097'
+    name: 'Mark',
+    amount: 100,
+    ir: 20,
+    period: 3,
+    purpose: 'Personal expenses'
   },
   {
     id: uuid(),
-    name: '',
-    amount: 1555016400000,
-    ir: 'ekaterina.tankova@devias.io',
-    period: 'Ekaterina Tankova',
-    purpose: '304-428-3097'
+    name: 'Marcus',
+    amount: 1000000,
+    ir: 20,
+    period: 3,
+    purpose: 'Personal expenses'
   },
   {
     id: uuid(),
-    name: '',
-    amount: 1555016400000,
-    ir: 'ekaterina.tankova@devias.io',
-    period: 'Ekaterina Tankova',
-    purpose: '304-428-3097'
+    name: 'Jacky Rich',
+    amount: 5000,
+    ir: 20,
+    period: 3,
+    purpose: 'Emergency expenses'
+  },
+  {
+    id: uuid(),
+    name: 'James Lim',
+    amount: 100,
+    ir: 20,
+    period: 3,
+    purpose: 'Personal expenses'
   },
 ];
