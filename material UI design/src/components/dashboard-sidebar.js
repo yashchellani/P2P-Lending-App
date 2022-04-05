@@ -20,7 +20,6 @@ var userType = 'default';
 if (typeof window !== 'undefined') {
   userType = localStorage.getItem('userType');
 }
-console.log(userType)
 var items = [];
 if (userType == 'borrower') {
   items = [
@@ -70,11 +69,11 @@ else if (userType == "lender"){
     //   icon: (<UsersIcon fontSize="small" />),
     //   title: 'Borrowers'
     // },
-    {
-      href: '/products',
-      icon: (<ShoppingBagIcon fontSize="small" />),
-      title: 'Products'
-    },
+    // {
+    //   href: '/products',
+    //   icon: (<ShoppingBagIcon fontSize="small" />),
+    //   title: 'Products'
+    // },
     {
       href: '/account',
       icon: (<UserIcon fontSize="small" />),
