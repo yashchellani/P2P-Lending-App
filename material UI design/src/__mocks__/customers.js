@@ -70,7 +70,7 @@ export const customers = [
     id: uuid(),
     name: 'Yash',
     amount: 15000,
-    ir: 5.0,
+    ir: 7.0,
     period: 18,
     purpose: 'Startup'
   },
@@ -118,8 +118,8 @@ export const customers = [
     id: uuid(),
     name: 'James',
     amount: 100,
-    ir: 20,
-    period: 3,
+    ir: 12,
+    period: 2,
     purpose: 'Personal Expenses'
   },
   {
@@ -150,32 +150,32 @@ export const customers = [
     id: uuid(),
     name: 'Mark',
     amount: 100,
-    ir: 20,
-    period: 3,
+    ir: 19,
+    period: 5,
     purpose: 'Personal expenses'
   },
   {
     id: uuid(),
     name: 'Marcus',
     amount: 1000000,
-    ir: 20,
-    period: 3,
+    ir: 2,
+    period: 12,
     purpose: 'Personal expenses'
   },
   {
     id: uuid(),
     name: 'Jacky Rich',
     amount: 5000,
-    ir: 20,
-    period: 3,
+    ir: 6,
+    period: 13,
     purpose: 'Emergency expenses'
   },
   {
     id: uuid(),
     name: 'James Lim',
     amount: 100,
-    ir: 20,
-    period: 3,
+    ir: 8,
+    period: 20,
     purpose: 'Personal expenses'
   },
 ];
