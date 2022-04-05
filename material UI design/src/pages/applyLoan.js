@@ -31,10 +31,6 @@ const Settings = () => (
         <Box >
           <Matching />
         </Box>
-         <MatchLenders /> 
-        <Box >
-          
-        </Box>
       </Container>
     </Box>
   </>

@@ -16,7 +16,8 @@ import {
   TableHead,
   TablePagination,
   TableRow,
-  Typography
+  Typography,
+  Modal
 } from '@mui/material';
 
 function request(){
@@ -35,8 +36,23 @@ const theme = {
 
 function MatchBorrowers(){
     const myList = customers;
-    console.log(myList[0])
+    
     const [items, setItems] = useState([]);
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    const style = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 400,
+        bgcolor: 'background.paper',
+        border: '2px solid #000',
+        boxShadow: 24,
+        p: 4,
+      };
 
     useEffect (() =>{
         const items = JSON.parse(localStorage.getItem('lenderDetails'));
@@ -65,7 +81,10 @@ function MatchBorrowers(){
             <TableCell>Interest Rate</TableCell>
             <TableCell>Loan Period</TableCell>
             <TableCell>Purpose</TableCell>
-            <TableCell>Accept</TableCell>
+            <TableCell>
+            <Button>Accept</Button>
+               
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -95,8 +114,7 @@ function MatchBorrowers(){
               <TableCell>{element.period}</TableCell>
               <TableCell>{element.purpose}</TableCell>
               <TableCell>
-                <Button
-                    >
+                <Button onClick={handleOpen}>
                     Accept
                 </Button>
               </TableCell>
@@ -104,6 +122,21 @@ function MatchBorrowers(){
           ))}
         </TableBody>
       </Table>
+      <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+                >
+                <Box sx={style}>
+                    <Typography id="modal-modal-title" variant="h3" component="h2">
+                    Loan Accepted!
+                    </Typography>
+                    <Typography id="modal-modal-description" variant = "h6" sx={{ mt: 2 }}>
+                    We have started to process the loan agreement and will shortly connect you with the borrower. 
+                    </Typography>
+                </Box>
+        </Modal>
       </Box>
     )
 }

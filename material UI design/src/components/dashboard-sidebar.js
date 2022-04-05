@@ -70,11 +70,11 @@ else if (userType == "lender"){
     //   icon: (<UsersIcon fontSize="small" />),
     //   title: 'Borrowers'
     // },
-    {
-      href: '/products',
-      icon: (<ShoppingBagIcon fontSize="small" />),
-      title: 'Products'
-    },
+    // {
+    //   href: '/products',
+    //   icon: (<ShoppingBagIcon fontSize="small" />),
+    //   title: 'Products'
+    // },
     {
       href: '/account',
       icon: (<UserIcon fontSize="small" />),

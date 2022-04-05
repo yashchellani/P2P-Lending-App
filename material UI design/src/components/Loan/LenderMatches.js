@@ -7,6 +7,7 @@ import { products } from 'src/__mocks__/products';
 import {
   Avatar,
   Box,
+  Button,
   Card,
   Checkbox,
   Table,
@@ -15,7 +16,8 @@ import {
   TableHead,
   TablePagination,
   TableRow,
-  Typography
+  Typography,
+  Modal
 } from '@mui/material';
 import { getInitials } from '../../utils/get-initials';
 
@@ -36,6 +38,21 @@ const theme = {
 function MatchLenders(){
     const myList = products;
     const [items, setItems] = useState([]);
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    const style = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 400,
+        bgcolor: 'background.paper',
+        border: '2px solid #000',
+        boxShadow: 24,
+        p: 4,
+      };
 
     useEffect (() =>{
         const items = JSON.parse(localStorage.getItem('loanDetails'));
@@ -93,13 +110,30 @@ function MatchLenders(){
               <TableCell>{element.maxAmount}</TableCell>
               <TableCell>{element.ir}</TableCell>
               <TableCell>{element.maxPeriod}</TableCell>
-              <TableCell>
-                <p>Apply</p>
-              </TableCell>
+             <TableCell>
+                <Button onClick={handleOpen}>
+                    Apply
+                </Button>
+                </TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
+      <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+                >
+                <Box sx={style}>
+                    <Typography id="modal-modal-title" variant="h3" component="h2">
+                    Application Submitted!
+                    </Typography>
+                    <Typography id="modal-modal-description" variant = "h6" sx={{ mt: 2 }}>
+                    Your application has been sent to lending users on the network! 
+                    </Typography>
+                </Box>
+        </Modal>
       </Box>
     )
 }
