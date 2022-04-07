@@ -1,96 +1,42 @@
-## [Material Kit - React](https://material-kit-react.devias.io/) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?text=%F0%9F%9A%A8Devias%20Freebie%20Alert%20-%20An%20awesome%20ready-to-use%20register%20page%20made%20with%20%23material%20%23react%0D%0Ahttps%3A%2F%2Fdevias.io%20%23createreactapp%20%23devias%20%23material%20%23freebie%20%40devias-io)
+# P2P-Lending-App-
 
-![license](https://img.shields.io/badge/license-MIT-blue.svg)
+# Installation
+To install all the dependencies, run the following command un the same directory as p2p-lending-app/. 
 
-[![Material Kit - React](https://github.com/devias-io/material-kit-react/blob/main/public/static/thumbnail.png)](https://material-kit-react.devias.io/)
 
-> Free React Admin Dashboard made with [MUI's](https://mui.com/?ref=devias-io) components, [React](https://reactjs.org/?ref=devias-io) and of course [Next.js](https://github.com/vercel/next.js/?ref=devias-io) to boost your app development process!
+npm install
 
-## Demo
 
-- [Dashboard Page](https://material-kit-react.devias.io)
-- [Users Page](https://material-kit-react.devias.io/customers)
-- [Products Page](https://material-kit-react.devias.io/products)
-- [Register Page](https://material-kit-react.devias.io/register)
-- [Login Page](https://material-kit-react.devias.io/login)
-- [Account Page](https://material-kit-react.devias.io/account)
-- [Settings Page](https://material-kit-react.devias.io/settings)
+## IMPORTANT:
+To run the project, you must run it in developer mode. 
 
-## Free Figma Community File
- - [Duplicate File](https://www.figma.com/community/file/1039837897183395483/Devias-Dashboard-Design-Library-Kit)
+Do not try to build the project, as this prototype has been designed to store data in-memory. Building the project will cause the memory persistence components to fail.
 
-## Upgrade to PRO Version
+To run this project, 
+Run the command in the same directory as this readme:
 
-We also have a pro version of this product which bundles even more pages and components if you want to save more time and design efforts :)
 
-| Free Version (this one)  | [Material Kit Pro - React](https://material-ui.com/store/items/devias-kit-pro/) |
-| ------------------------ | :----------------------------------------------------------- |
-| **7** Demo Pages         | **40+** demo pages
-| -                        | ✔ Dark & light mode
-| -                        | ✔ Authentication with *Amplify**, **Auth0**, **JWT** and **Firebase**
-| -                        | ✔ TypeScript version - for Standard Plus and Extended license
-| -                        | ✔ Design files (sketch & figma) - for Standard Plus and Extended license
-| -                        | ✔ Complete users flows
+npm run dev
 
-## Quick start
 
-- [Download from Github](https://github.com/devias-io/material-kit-react/archive/master.zip) or [Download from Devias](https://devias.io/products/material-kit-react) or clone the repo: `git clone https://github.com/devias-io/material-kit-react.git`
+## IMPORTANT
+To view the project, YOU MUST start your journey at the register page. This is to ensure that all the in-browser memmory objects are populated along the way. 
 
-- Make sure your NodeJS and npm versions are up to date for `React 17`
+To do so, run the following in your browser (for both Borrower and Lender views):
 
-- Install dependencies: `npm install` or `yarn`
+http://localhost:3000/register
 
-- Start the server: `npm run dev` or `yarn dev`
 
-- Views are on: `localhost:3000`
 
-## File Structure
+## Debugging
+If you encounter any crashes, it is most likely because an in-memory component has not been populated properly. This may occur since we are using a state-based and browser-based prototype without database persistence. 
 
-Within the download you'll find the following directories and files:
+To circumvent the errors, simply restart from 
 
-```
-material-kit-react
+http://localhost:3000/register
 
-┌── .eslintrc.json
-├── .gitignore
-├── CHANGELOG.md
-├── jsconfig.json
-├── LICENSE.md
-├── package.json
-├── README.md
-├── public
-└── src
-	├── __mocks__
-	├── components
-	├── icons
-	├── theme
-	├── utils
-	└── pages
-		├── 404.js
-		├── _app.js
-		├── _document.js
-		├── account.js
-		├── customers.js
-		├── index.js
-		├── login.js
-		├── products.js
-		├── register.js
-		└── settings.js
-```
+Note: Since the in-browser memory is volatile, everytime you wish to see the lender's/borrower's view, you will have to follow this route:
 
-## Resources
+register new account -> login -> go to the dashboard
 
-- More freebies like this one: <https://devias.io>
-
-## Reporting Issues:
-
-- [Github Issues Page](https://github.com/devias-io/react-material-dashboard/issues?ref=devias-io)
-
-## License
-
-- Licensed under MIT (https://github.com/devias-io/react-material-dashboard/blob/master/LICENSE.md)
-
-## Contact Us
-
-- Email Us: support@deviasio.zendesk.com
-- [Follow us on Instagram](https://www.instagram.com/deviasio/)
+Therefore, for every session, you will need to register a new account. However, you can use the same credentials as before to create this new account.
